@@ -30,7 +30,7 @@ export default function WorkPage() {
               Our <span className="text-gradient">Work</span>
             </h1>
             <p className="text-xl md:text-2xl text-white mb-8 max-w-3xl mx-auto leading-relaxed drop-shadow-lg">
-              Discover how we're making a difference through advocacy, empowerment, and recognition across Africa
+              Discover how we&apos;re making a difference through advocacy, empowerment, and recognition across Africa
             </p>
           </div>
         </div>
@@ -153,7 +153,7 @@ export default function WorkPage() {
                 description: "Women who are pioneering new paths and creating opportunities for others.",
                 image: "/img/10.jpg"
               }
-            ].map((item, index) => (
+            ].map((item) => (
               <div key={item.title} className="group">
                 <div className="relative overflow-hidden rounded-2xl shadow-soft hover:shadow-medium transition-all duration-300">
                   <Image
@@ -193,7 +193,7 @@ export default function WorkPage() {
               { title: "Advocacy Guides", icon: "📢" },
               { title: "Educational Videos", icon: "🎥" },
               { title: "Community Toolkits", icon: "🛠️" }
-            ].map((resource, index) => (
+            ].map((resource) => (
               <div key={resource.title} className="text-center group">
                 <div className="mb-4">
                   <div className="w-16 h-16 mx-auto mb-3 rounded-full bg-gradient-to-br from-primary-100 to-accent-100 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform duration-300">

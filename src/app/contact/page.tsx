@@ -243,7 +243,7 @@ export default function ContactPage() {
                 icon: "💝",
                 color: "from-primary-600 to-accent-500"
               }
-            ].map((item, index) => (
+            ].map((item) => (
               <div key={item.title} className="text-center group">
                 <div className="mb-6">
                   <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-br from-primary-100 to-accent-100 flex items-center justify-center">
@@ -279,7 +279,7 @@ export default function ContactPage() {
               </h2>
               <div className="space-y-6">
                 <p className="text-lg text-neutral-700 leading-relaxed">
-                  Connect with like-minded individuals who are passionate about women's empowerment and gender equality across Africa.
+                  Connect with like-minded individuals who are passionate about women&apos;s empowerment and gender equality across Africa.
                 </p>
                 <p className="text-lg text-neutral-700 leading-relaxed">
                   Stay updated on our latest initiatives, success stories, and opportunities to make a difference in your community.

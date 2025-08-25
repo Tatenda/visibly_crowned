@@ -28,12 +28,7 @@ export default function Home() {
     }
   ];
 
-  const stats = [
-    { number: '50+', label: 'Communities Reached' },
-    { number: '1000+', label: 'Women Empowered' },
-    { number: '25+', label: 'Partnerships' },
-    { number: '100%', label: 'Dedication' }
-  ];
+
 
   return (
     <main className="min-h-screen">
@@ -95,7 +90,7 @@ export default function Home() {
             <div className="max-w-2xl mx-auto text-center">
               <div className="w-24 h-px bg-white/30 mx-auto mb-4"></div>
               <p className="text-lg md:text-xl text-white/90 font-light tracking-wider drop-shadow-md">
-                "Every woman's story is a crown waiting to be worn"
+                &quot;Every woman&apos;s story is a crown waiting to be worn&quot;
               </p>
               <p className="text-sm text-white/70 mt-2 font-light">
                 EMPOWERING AFRICA • ONE VOICE AT A TIME
@@ -118,9 +113,9 @@ export default function Home() {
             </p>
             <div className="bg-gradient-to-r from-primary-50 to-accent-50 rounded-3xl p-8 md:p-12">
               <p className="text-lg md:text-xl text-neutral-800 leading-relaxed font-medium">
-                "We believe that every woman and girl deserves to be seen, heard, and empowered. 
-                Through our three core pillars, we're building a future where African women and girls 
-                can thrive, lead, and inspire change across the continent."
+                &quot;We believe that every woman and girl deserves to be seen, heard, and empowered. 
+                Through our three core pillars, we&apos;re building a future where African women and girls 
+                can thrive, lead, and inspire change across the continent.&quot;
               </p>
             </div>
           </div>
@@ -152,7 +147,7 @@ export default function Home() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
                 <div className="absolute bottom-8 left-8 md:bottom-12 md:left-12 text-white max-w-2xl">
-                  <h3 className="text-2xl md:text-4xl font-bold mb-3">Building Tomorrow's Leaders</h3>
+                  <h3 className="text-2xl md:text-4xl font-bold mb-3">Building Tomorrow&apos;s Leaders</h3>
                   <p className="text-lg md:text-xl opacity-90">Together We Rise Above Challenges</p>
                 </div>
               </div>

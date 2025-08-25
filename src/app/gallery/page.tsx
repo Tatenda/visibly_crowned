@@ -1,6 +1,6 @@
 import Navigation from '@/components/layout/Navigation';
 import Footer from '@/components/layout/Footer';
-import Link from 'next/link';
+
 
 export default function GalleryPage() {
   return (

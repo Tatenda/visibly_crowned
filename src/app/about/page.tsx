@@ -110,7 +110,7 @@ export default function AboutPage() {
                 Visibly Crowned was born from a simple yet powerful belief: that every woman and girl deserves to be seen, heard, and empowered. What started as a local initiative has grown into a Pan-African movement.
               </p>
               <p className="text-lg text-neutral-700 leading-relaxed">
-                We've witnessed the transformative power of community support, education, and recognition. Through our work, we've seen women break barriers, girls pursue their dreams, and communities come together to create lasting change.
+                We&apos;ve witnessed the transformative power of community support, education, and recognition. Through our work, we&apos;ve seen women break barriers, girls pursue their dreams, and communities come together to create lasting change.
               </p>
               <p className="text-lg text-neutral-700 leading-relaxed">
                 Today, we continue to expand our reach, working with partners across the continent to build a future where African women and girls can thrive, lead, and inspire change.
@@ -185,10 +185,10 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-6">
                 <p className="text-lg text-neutral-700 leading-relaxed">
-                  Over the years, we've made significant strides in our mission to empower women and girls across Africa. Our programs have touched thousands of lives and created lasting change in communities.
+                  Over the years, we&apos;ve made significant strides in our mission to empower women and girls across Africa. Our programs have touched thousands of lives and created lasting change in communities.
                 </p>
                 <p className="text-lg text-neutral-700 leading-relaxed">
-                  We've been recognized for our innovative approaches and commitment to gender equality, but our greatest achievement is the success stories of the women and girls we've supported.
+                  We&apos;ve been recognized for our innovative approaches and commitment to gender equality, but our greatest achievement is the success stories of the women and girls we&apos;ve supported.
                 </p>
                 <div className="pt-4">
                   <Link href="/gallery" className="inline-flex items-center space-x-3 text-primary-700 hover:text-primary-800 font-semibold text-lg group transition-all duration-300">
