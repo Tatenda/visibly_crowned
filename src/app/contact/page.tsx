@@ -150,7 +150,7 @@ export default function ContactPage() {
                      </div>
                      <div>
                        <h4 className="font-semibold text-neutral-900">Email</h4>
-                       <p className="text-neutral-600">info@visiblycrowned.org</p>
+                       <p className="text-neutral-600">info@visiblycrowned.com</p>
                      </div>
                    </div>
                    
@@ -162,7 +162,7 @@ export default function ContactPage() {
                      </div>
                      <div>
                        <h4 className="font-semibold text-neutral-900">Phone</h4>
-                       <p className="text-neutral-600">+27 11 234 5678</p>
+                       <p className="text-neutral-600">+27 73 9453878</p>
                      </div>
                    </div>
                   
@@ -175,7 +175,7 @@ export default function ContactPage() {
                      </div>
                      <div>
                        <h4 className="font-semibold text-neutral-900">Location</h4>
-                       <p className="text-neutral-600">Johannesburg, South Africa<br />Pan-African Initiative</p>
+                       <p className="text-neutral-600">Johannesburg, South Africa</p>
                      </div>
                    </div>
                   

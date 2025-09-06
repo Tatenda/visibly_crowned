@@ -33,20 +33,7 @@ export default function GalleryPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Gallery items would go here */}
-            <div className="card card-hover p-6 text-center">
-              <div className="w-full h-48 bg-gradient-to-br from-primary-100 to-accent-100 rounded-xl mb-4 flex items-center justify-center text-6xl text-primary-400">
-                📷
-              </div>
-              <h3 className="text-lg font-bold text-neutral-900 mb-2">
-                Community Workshop
-              </h3>
-              <p className="text-neutral-700 text-sm">
-                Women participating in our skills development program
-              </p>
-            </div>
-          </div>
+          
         </div>
       </section>
 
