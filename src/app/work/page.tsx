@@ -102,7 +102,7 @@ export default function WorkPage() {
               </h2>
               <div className="space-y-6">
                 <p className="text-lg text-neutral-700 leading-relaxed">
-                  Safety is not a privilege; it's a right. The Stand Safe Initiative equips women and girls with self-defence training and tools, including pepper sprays and personal alarms. We also host awareness workshops on how to recognise, prevent, and respond to gender-based violence. The goal is simple: to help women and girls feel safer, stronger, and more prepared in their daily lives.
+                  Safety is not a privilege; it&apos;s a right. The Stand Safe Initiative equips women and girls with self-defence training and tools, including pepper sprays and personal alarms. We also host awareness workshops on how to recognise, prevent, and respond to gender-based violence. The goal is simple: to help women and girls feel safer, stronger, and more prepared in their daily lives.
                 </p>
                 <div className="pt-4">
                   <Link href="/contact" className="inline-flex items-center space-x-3 text-primary-700 hover:text-primary-800 font-semibold text-lg group transition-all duration-300">
@@ -184,7 +184,7 @@ export default function WorkPage() {
               </h2>
               <div className="space-y-6">
                 <p className="text-lg text-neutral-700 leading-relaxed">
-                  Empowerment goes beyond words; it's about building tangible skills and opportunities. Empower Her focuses on training programmes, workshops, and resources that help women gain confidence, entrepreneurial skills, and financial independence. From soft skills to practical skills, this initiative gives women the tools to take control of their futures.
+                  Empowerment goes beyond words; it&apos;s about building tangible skills and opportunities. Empower Her focuses on training programmes, workshops, and resources that help women gain confidence, entrepreneurial skills, and financial independence. From soft skills to practical skills, this initiative gives women the tools to take control of their futures.
                 </p>
                 <div className="pt-4">
                   <Link href="/contact" className="inline-flex items-center space-x-3 text-primary-700 hover:text-primary-800 font-semibold text-lg group transition-all duration-300">
