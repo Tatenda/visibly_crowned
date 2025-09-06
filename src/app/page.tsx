@@ -41,7 +41,7 @@ export default function Home() {
         {/* Hero Background Image */}
         <div className="absolute inset-0">
           <Image
-            src="/img/hero.jpg"
+            src="/img/15.jpg"
             alt="Hero Background"
             fill
             className="object-cover"
@@ -72,7 +72,14 @@ export default function Home() {
                 <span className="text-gradient">Crowned</span>
               </h1>
               <p className="text-xl md:text-2xl text-white mb-8 max-w-3xl mx-auto leading-relaxed drop-shadow-lg">
-                Empowering women and girls across Africa through advocacy, empowerment, and recognition
+                A movement for the empowerment of women and girls in Africa
+              </p>
+            </div>
+
+            {/* Mission Subheading */}
+            <div className="max-w-4xl mx-auto mb-8">
+              <p className="text-lg md:text-xl text-white/95 leading-relaxed drop-shadow-lg">
+                We believe every woman and girl is born crowned with dignity, purpose, and power. Our mission is to end violence, champion gender equality, and create opportunities that allow women and girls to rise, lead, and thrive.
               </p>
             </div>
 
@@ -90,10 +97,7 @@ export default function Home() {
             <div className="max-w-2xl mx-auto text-center">
               <div className="w-24 h-px bg-white/30 mx-auto mb-4"></div>
               <p className="text-lg md:text-xl text-white/90 font-light tracking-wider drop-shadow-md">
-                &quot;Every woman&apos;s story is a crown waiting to be worn&quot;
-              </p>
-              <p className="text-sm text-white/70 mt-2 font-light">
-                EMPOWERING AFRICA • ONE VOICE AT A TIME
+                &quot;Empowering women & girls. Ending violence. Building equality.&quot;
               </p>
             </div>
           </div>
@@ -105,17 +109,16 @@ export default function Home() {
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold text-neutral-900 mb-8">
-              Our Mission
+              What We Believe
             </h2>
-            <p className="text-xl md:text-2xl text-neutral-700 leading-relaxed mb-12">
-              Visibly Crowned is a Pan-African initiative focused on advocating for gender equality, 
-              ending violence against women and girls, and creating opportunities for empowerment.
-            </p>
+            {/* <p className="text-xl md:text-2xl text-neutral-700 leading-relaxed mb-12">
+              At Visibly Crowned, our mission is to create a safe and empowering space for women and girls across Africa, a space where their voices are heard, their rights are defended, and their dreams are nurtured. We exist to challenge and dismantle systems that perpetuate violence and inequality, while equipping women and girls with the tools to rise, lead, and thrive. Because when one woman rises, generations rise with her, and every crown lifted makes the world stronger.
+            </p> */}
             <div className="bg-gradient-to-r from-primary-50 to-accent-50 rounded-3xl p-8 md:p-12">
               <p className="text-lg md:text-xl text-neutral-800 leading-relaxed font-medium">
-                &quot;We believe that every woman and girl deserves to be seen, heard, and empowered. 
+                We believe that every woman and girl deserves to be seen, heard, and empowered. 
                 Through our three core pillars, we&apos;re building a future where African women and girls 
-                can thrive, lead, and inspire change across the continent.&quot;
+                can thrive, lead, and inspire change across the continent.
               </p>
             </div>
           </div>
@@ -202,9 +205,9 @@ export default function Home() {
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Join Us in Making a Difference
           </h2>
-          <p className="text-xl md:text-2xl text-primary-100 mb-12 max-w-3xl mx-auto">
+          {/* <p className="text-xl md:text-2xl text-primary-100 mb-12 max-w-3xl mx-auto">
             Together, we can create a world where every woman and girl is empowered to reach their full potential
-          </p>
+          </p> */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact" className="bg-white text-primary-700 hover:bg-primary-50 font-semibold py-4 px-8 rounded-lg shadow-medium hover:shadow-large transform hover:-translate-y-1 transition-all duration-300 text-lg">
               Get Involved Today
