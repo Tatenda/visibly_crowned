@@ -126,7 +126,7 @@ export default function Home() {
             <div className="relative group">
               <div className="relative overflow-hidden rounded-3xl shadow-large">
                 <Image
-                  src="/img/home2.jpg"
+                  src="/img/story.jpg"
                   alt="What We Believe"
                   width={600}
                   height={400}

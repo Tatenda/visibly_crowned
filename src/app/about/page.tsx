@@ -13,7 +13,7 @@ export default function AboutPage() {
         {/* Hero Background Image */}
         <div className="absolute inset-0">
           <Image
-            src="/img/about us 3.jpg"
+            src="/img/about.jpg"
             alt="About Us Hero"
             fill
             className="object-cover"
@@ -42,9 +42,6 @@ export default function AboutPage() {
             <h2 className="text-4xl md:text-5xl font-bold text-neutral-900 mb-6">
               Our Story
             </h2>
-            <p className="text-xl text-neutral-700 max-w-3xl mx-auto">
-              From humble beginnings to a Pan-African movement for change
-            </p>
           </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -52,7 +49,7 @@ export default function AboutPage() {
             <div className="relative group">
               <div className="relative overflow-hidden rounded-3xl shadow-large">
                 <Image
-                  src="/img/story.jpg"
+                  src="/img/ourstory.jpg"
                   alt="Our Journey"
                   width={600}
                   height={400}
@@ -110,7 +107,7 @@ export default function AboutPage() {
             <div className="relative group">
               <div className="relative overflow-hidden rounded-3xl shadow-large">
                 <Image
-                  src="/img/2.jpg"
+                  src="/img/11.jpg"
                   alt="Women Empowerment"
                   width={600}
                   height={400}

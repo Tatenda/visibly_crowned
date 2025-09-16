@@ -13,7 +13,7 @@ export default function WorkPage() {
         {/* Hero Background Image */}
         <div className="absolute inset-0">
           <Image
-            src="/img/9.jpg"
+            src="/img/ourwork.jpg"
             alt="Our Work Hero"
             fill
             className="object-cover object-center"
