@@ -41,7 +41,7 @@ export default function Home() {
         {/* Hero Background Image */}
         <div className="absolute inset-0">
           <Image
-            src="/img/15.jpg"
+            src="/img/home.jpg"
             alt="Hero Background"
             fill
             className="object-cover"
@@ -107,19 +107,33 @@ export default function Home() {
         {/* Mission Statement */}
         <section className="section-padding bg-white snap-start">
         <div className="container-custom">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-neutral-900 mb-8">
-              What We Believe
-            </h2>
-            {/* <p className="text-xl md:text-2xl text-neutral-700 leading-relaxed mb-12">
-              At Visibly Crowned, our mission is to create a safe and empowering space for women and girls across Africa, a space where their voices are heard, their rights are defended, and their dreams are nurtured. We exist to challenge and dismantle systems that perpetuate violence and inequality, while equipping women and girls with the tools to rise, lead, and thrive. Because when one woman rises, generations rise with her, and every crown lifted makes the world stronger.
-            </p> */}
-            <div className="bg-gradient-to-r from-primary-50 to-accent-50 rounded-3xl p-8 md:p-12">
-              <p className="text-lg md:text-xl text-neutral-800 leading-relaxed font-medium">
-                We believe that every woman and girl deserves to be seen, heard, and empowered. 
-                Through our three core pillars, we&apos;re building a future where African women and girls 
-                can thrive, lead, and inspire change across the continent.
-              </p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left Side - Content */}
+            <div>
+              <h2 className="text-4xl md:text-5xl font-bold text-neutral-900 mb-8">
+                What We Believe
+              </h2>
+              <div className="bg-gradient-to-r from-primary-50 to-accent-50 rounded-3xl p-8 md:p-12">
+                <p className="text-lg md:text-xl text-neutral-800 leading-relaxed font-medium">
+                  We believe that every woman and girl deserves to be seen, heard, and empowered. 
+                  Through our three core pillars, we&apos;re building a future where African women and girls 
+                  can thrive, lead, and inspire change across the continent.
+                </p>
+              </div>
+            </div>
+            
+            {/* Right Side - Image */}
+            <div className="relative group">
+              <div className="relative overflow-hidden rounded-3xl shadow-large">
+                <Image
+                  src="/img/home2.jpg"
+                  alt="What We Believe"
+                  width={600}
+                  height={400}
+                  className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+              </div>
             </div>
           </div>
         </div>
@@ -141,18 +155,14 @@ export default function Home() {
             <div className="relative mb-16">
               <div className="relative overflow-hidden rounded-3xl shadow-large">
                 <Image
-                  src="/img/diverse.jpg"
+                  src="/img/pillars.jpg"
                   alt="Diverse African Women Empowerment"
                   width={1200}
                   height={500}
                   className="w-full h-96 md:h-[500px] object-cover object-center"
                   style={{ objectPosition: 'center 30%' }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
-                <div className="absolute bottom-8 left-8 md:bottom-12 md:left-12 text-white max-w-2xl">
-                  <h3 className="text-2xl md:text-4xl font-bold mb-3">Building Tomorrow&apos;s Leaders</h3>
-                  <p className="text-lg md:text-xl opacity-90">Together We Rise Above Challenges</p>
-                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
               </div>
             </div>
 

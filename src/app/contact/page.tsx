@@ -205,7 +205,7 @@ export default function ContactPage() {
               <div className="relative group">
                 <div className="relative overflow-hidden rounded-3xl shadow-large">
                   <Image
-                    src="/img/9.jpg"
+                    src="/img/volunteer.jpg"
                     alt="Community Connection"
                     width={600}
                     height={400}

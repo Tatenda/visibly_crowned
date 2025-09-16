@@ -13,7 +13,7 @@ export default function AboutPage() {
         {/* Hero Background Image */}
         <div className="absolute inset-0">
           <Image
-            src="/img/12.jpg"
+            src="/img/about us 3.jpg"
             alt="About Us Hero"
             fill
             className="object-cover"
@@ -52,7 +52,7 @@ export default function AboutPage() {
             <div className="relative group">
               <div className="relative overflow-hidden rounded-3xl shadow-large">
                 <Image
-                  src="/img/3.jpg"
+                  src="/img/story.jpg"
                   alt="Our Journey"
                   width={600}
                   height={400}

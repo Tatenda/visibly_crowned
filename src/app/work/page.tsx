@@ -64,7 +64,7 @@ export default function WorkPage() {
             <div className="relative group">
               <div className="relative overflow-hidden rounded-3xl shadow-large">
                 <Image
-                  src="/img/7.jpg"
+                  src="/img/mentor.jpg"
                   alt="Her Mentor Match Initiative"
                   width={600}
                   height={400}
@@ -146,12 +146,11 @@ export default function WorkPage() {
             <div className="relative group">
               <div className="relative overflow-hidden rounded-3xl shadow-large">
                 <Image
-                  src="/img/diverse.jpg"
+                  src="/img/2.jpg"
                   alt="Educate Her Initiative"
                   width={600}
                   height={400}
                   className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-700"
-                  style={{ objectPosition: 'center 30%' }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
               </div>
@@ -168,7 +167,7 @@ export default function WorkPage() {
             <div className="relative group">
               <div className="relative overflow-hidden rounded-3xl shadow-large">
                 <Image
-                  src="/img/5.jpg"
+                  src="/img/empower her.jpg"
                   alt="Empower Her Initiative"
                   width={600}
                   height={400}
@@ -229,7 +228,7 @@ export default function WorkPage() {
             <div className="relative group">
               <div className="relative overflow-hidden rounded-3xl shadow-large">
                 <Image
-                  src="/img/10.jpg"
+                  src="/img/voices.jpg"
                   alt="Voices for Change Initiative"
                   width={600}
                   height={400}
