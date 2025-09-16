@@ -189,48 +189,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Impact & Recognition */}
-      {/* <section className="section-padding bg-neutral-100">
-        <div className="container-custom">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-4xl md:text-5xl font-bold text-neutral-900 mb-8">
-                Our Impact & Recognition
-              </h2>
-              <div className="space-y-6">
-                <p className="text-lg text-neutral-700 leading-relaxed">
-                  Over the years, we&apos;ve made significant strides in our mission to empower women and girls across Africa. Our programs have touched thousands of lives and created lasting change in communities.
-                </p>
-                <p className="text-lg text-neutral-700 leading-relaxed">
-                  We&apos;ve been recognized for our innovative approaches and commitment to gender equality, but our greatest achievement is the success stories of the women and girls we&apos;ve supported.
-                </p>
-                <div className="pt-4">
-                  <Link href="/gallery" className="inline-flex items-center space-x-3 text-primary-700 hover:text-primary-800 font-semibold text-lg group transition-all duration-300">
-                    <span>See Our Impact</span>
-                    <svg className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                    </svg>
-                  </Link>
-                </div>
-              </div>
-            </div>
-            
-            <div className="relative group">
-              <div className="relative overflow-hidden rounded-3xl shadow-large">
-                <Image
-                  src="/img/4.jpg"
-                  alt="Our Impact"
-                  width={600}
-                  height={400}
-                  className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
-
       {/* Call to Action */}
       <section className="section-padding bg-gradient-to-br from-primary-700 to-primary-800 text-white">
         <div className="container-custom text-center">
