@@ -13,7 +13,7 @@ export default function AboutPage() {
         {/* Hero Background Image */}
         <div className="absolute inset-0">
           <Image
-            src="/img/about.jpg"
+            src="/img/4.jpg"
             alt="About Us Hero"
             fill
             className="object-cover"
