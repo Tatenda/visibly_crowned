@@ -154,14 +154,12 @@ const Footer = () => {
         <div className="container-custom">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-neutral-400 text-sm">
-              © {currentYear} Visibly Crowned. All rights reserved.
+              © {currentYear} Visibly Crowned. All rights reserved.<br />
+              NPC Registration: 2025/714088/08
             </div>
             <div className="flex space-x-6 text-sm">
               <Link href="/privacy" className="text-neutral-400 hover:text-primary-400 transition-colors duration-200">
                 Privacy Policy
-              </Link>
-              <Link href="/terms" className="text-neutral-400 hover:text-primary-400 transition-colors duration-200">
-                Terms of Service
               </Link>
               <Link href="/contact" className="text-neutral-400 hover:text-primary-400 transition-colors duration-200">
                 Contact

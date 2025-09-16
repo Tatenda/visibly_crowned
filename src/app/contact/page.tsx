@@ -11,11 +11,11 @@ export default function ContactPage() {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[100vh] flex items-center justify-center overflow-hidden pt-24">
         {/* Hero Background Image */}
         <div className="absolute inset-0">
           <Image
-            src="/img/8.jpg"
+            src="/img/contact.jpg"
             alt="Contact Us Hero"
             fill
             className="object-cover"
@@ -123,6 +123,14 @@ export default function ContactPage() {
                     className="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300 resize-none"
                     placeholder="Tell us how we can help you..."
                   ></textarea>
+                </div>
+                
+                <div className="text-sm text-neutral-600 mb-4">
+                  By submitting this form, you agree to our{' '}
+                  <Link href="/privacy" className="text-primary-700 hover:text-primary-800 underline">
+                    Privacy Policy
+                  </Link>
+                  . We respect your privacy and will only use your information to respond to your inquiry.
                 </div>
                 
                 <button
