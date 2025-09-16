@@ -112,6 +112,7 @@ export default function AboutPage() {
                   width={600}
                   height={400}
                   className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-700"
+                  style={{ objectPosition: 'center 30%' }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
               </div>

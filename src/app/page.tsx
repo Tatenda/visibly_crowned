@@ -41,7 +41,7 @@ export default function Home() {
         {/* Hero Background Image */}
         <div className="absolute inset-0">
           <Image
-            src="/img/home.jpg"
+            src="/img/landing.jpg"
             alt="Hero Background"
             fill
             className="object-cover"
