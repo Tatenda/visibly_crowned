@@ -21,9 +21,9 @@ const Footer = () => {
   };
 
   const socialLinks = [
-    { name: 'Instagram', href: '#', icon: 'Instagram' },
-    { name: 'Facebook', href: '#', icon: 'Facebook' },
-    { name: 'WhatsApp', href: 'https://wa.me/27739453878', icon: 'WhatsApp' },
+    { name: 'Instagram', href: 'https://www.instagram.com/visibly_crowned/', icon: 'Instagram' },
+    { name: 'Facebook', href: 'https://www.facebook.com/VisiblyCrowned/', icon: 'Facebook' },
+    { name: 'WhatsApp', href: 'https://wa.me/27628480642', icon: 'WhatsApp' },
   ];
 
   return (
