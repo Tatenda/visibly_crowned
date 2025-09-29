@@ -60,7 +60,7 @@ const Navigation = () => {
               </Link>
             ))}
             <Link
-              href="/contact"
+              href="/get-involved"
               className="btn-primary text-sm px-6 py-2.5"
             >
               Get Involved
@@ -112,7 +112,7 @@ const Navigation = () => {
             ))}
             <div className="pt-4">
               <Link
-                href="/contact"
+                href="/get-involved"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="btn-primary w-full text-center"
               >

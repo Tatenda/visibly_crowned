@@ -20,7 +20,7 @@ export default function AboutPage() {
             priority
           />
           {/* Overlay for better text readability */}
-          <div className="absolute inset-0 bg-black/80"></div>
+          <div className="absolute inset-0 bg-black/60"></div>
         </div>
         
         <div className="container-custom relative z-10 text-center">
@@ -49,7 +49,7 @@ export default function AboutPage() {
             <div className="relative group">
               <div className="relative overflow-hidden rounded-3xl shadow-large">
                 <Image
-                  src="/img/ourstory.jpg"
+                  src="/img/voicesof.jpg"
                   alt="Our Journey"
                   width={600}
                   height={400}

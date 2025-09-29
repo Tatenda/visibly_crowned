@@ -2,10 +2,76 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
+import { useState } from 'react';
 import Navigation from '@/components/layout/Navigation';
 import Footer from '@/components/layout/Footer';
 
 export default function ContactPage() {
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<{
+    type: 'success' | 'error' | null;
+    message: string;
+  }>({ type: null, message: '' });
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus({ type: null, message: '' });
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setSubmitStatus({
+          type: 'success',
+          message: result.message
+        });
+        // Reset form
+        setFormData({
+          firstName: '',
+          lastName: '',
+          email: '',
+          subject: '',
+          message: ''
+        });
+      } else {
+        setSubmitStatus({
+          type: 'error',
+          message: result.error || 'Something went wrong. Please try again.'
+        });
+      }
+    } catch (error) {
+      setSubmitStatus({
+        type: 'error',
+        message: 'Network error. Please check your connection and try again.'
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
   return (
     <main className="min-h-screen">
       <Navigation />
@@ -47,7 +113,33 @@ export default function ContactPage() {
                 Send Us a Message
               </h2>
               
-              <form className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6">
+                {/* Status Messages */}
+                {submitStatus.type && (
+                  <div className={`p-4 rounded-lg ${
+                    submitStatus.type === 'success' 
+                      ? 'bg-green-50 border border-green-200 text-green-800' 
+                      : 'bg-red-50 border border-red-200 text-red-800'
+                  }`}>
+                    <div className="flex items-center">
+                      <div className="flex-shrink-0">
+                        {submitStatus.type === 'success' ? (
+                          <svg className="h-5 w-5 text-green-400" viewBox="0 0 20 20" fill="currentColor">
+                            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                          </svg>
+                        ) : (
+                          <svg className="h-5 w-5 text-red-400" viewBox="0 0 20 20" fill="currentColor">
+                            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
+                          </svg>
+                        )}
+                      </div>
+                      <div className="ml-3">
+                        <p className="text-sm font-medium">{submitStatus.message}</p>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="firstName" className="block text-sm font-semibold text-neutral-700 mb-2">
@@ -57,6 +149,8 @@ export default function ContactPage() {
                       type="text"
                       id="firstName"
                       name="firstName"
+                      value={formData.firstName}
+                      onChange={handleInputChange}
                       required
                       className="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300"
                       placeholder="Your first name"
@@ -70,6 +164,8 @@ export default function ContactPage() {
                       type="text"
                       id="lastName"
                       name="lastName"
+                      value={formData.lastName}
+                      onChange={handleInputChange}
                       required
                       className="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300"
                       placeholder="Your last name"
@@ -85,6 +181,8 @@ export default function ContactPage() {
                     type="email"
                     id="email"
                     name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
                     required
                     className="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300"
                     placeholder="your.email@example.com"
@@ -98,6 +196,8 @@ export default function ContactPage() {
                   <select
                     id="subject"
                     name="subject"
+                    value={formData.subject}
+                    onChange={handleInputChange}
                     required
                     className="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300"
                   >
@@ -118,6 +218,8 @@ export default function ContactPage() {
                   <textarea
                     id="message"
                     name="message"
+                    value={formData.message}
+                    onChange={handleInputChange}
                     rows={6}
                     required
                     className="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300 resize-none"
@@ -135,9 +237,20 @@ export default function ContactPage() {
                 
                 <button
                   type="submit"
-                  className="w-full bg-primary-700 hover:bg-primary-800 text-white font-semibold py-4 px-8 rounded-lg shadow-medium hover:shadow-large transform hover:-translate-y-1 transition-all duration-300 text-lg"
+                  disabled={isSubmitting}
+                  className="w-full bg-primary-700 hover:bg-primary-800 disabled:bg-neutral-400 disabled:cursor-not-allowed text-white font-semibold py-4 px-8 rounded-lg shadow-medium hover:shadow-large transform hover:-translate-y-1 disabled:transform-none transition-all duration-300 text-lg"
                 >
-                  Send Message
+                  {isSubmitting ? (
+                    <div className="flex items-center justify-center">
+                      <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                      </svg>
+                      Sending...
+                    </div>
+                  ) : (
+                    'Send Message'
+                  )}
                 </button>
               </form>
             </div>
@@ -219,126 +332,8 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Ways to Get Involved */}
-      <section className="section-padding bg-neutral-50">
-        <div className="container-custom">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-neutral-900 mb-6">
-              Ways to Get Involved
-            </h2>
-            <p className="text-xl text-neutral-700 max-w-3xl mx-auto">
-              There are many ways you can support our mission and make a difference
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Volunteer",
-                description: "Join our team of dedicated volunteers and contribute your time and skills to our programs.",
-                icon: "🤝",
-                color: "from-primary-500 to-primary-600"
-              },
-              {
-                title: "Partner",
-                description: "Partner with us to expand our reach and create greater impact across Africa.",
-                icon: "🤝",
-                color: "from-accent-500 to-accent-600"
-              },
-              {
-                title: "Support",
-                description: "Support our work through donations and help us continue our mission.",
-                icon: "💝",
-                color: "from-primary-600 to-accent-500"
-              }
-            ].map((item) => (
-              <div key={item.title} className="text-center group">
-                <div className="mb-6">
-                  <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-br from-primary-100 to-accent-100 flex items-center justify-center">
-                    <div className={`w-12 h-12 rounded-full bg-gradient-to-br ${item.color} flex items-center justify-center text-white text-2xl`}>
-                      {item.icon}
-                    </div>
-                  </div>
-                </div>
-                
-                <h3 className="text-2xl font-bold text-neutral-900 mb-4 group-hover:text-primary-700 transition-colors duration-300">
-                  {item.title}
-                </h3>
-                
-                <p className="text-neutral-700 leading-relaxed mb-6">
-                  {item.description}
-                </p>
-                
-                <div className="h-1 w-16 mx-auto bg-gradient-to-r from-primary-400 to-accent-500 rounded-full group-hover:w-24 transition-all duration-300"></div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* Community Connection */}
-      <section className="section-padding bg-white">
-        <div className="container-custom">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Left Side - Content */}
-            <div>
-              <h2 className="text-4xl md:text-5xl font-bold text-neutral-900 mb-8">
-                Join Our Community
-              </h2>
-              <div className="space-y-6">
-                <p className="text-lg text-neutral-700 leading-relaxed">
-                  Connect with like-minded individuals who are passionate about women&apos;s empowerment and gender equality across Africa.
-                </p>
-                <p className="text-lg text-neutral-700 leading-relaxed">
-                  Stay updated on our latest initiatives, success stories, and opportunities to make a difference in your community.
-                </p>
-                <div className="pt-4">
-                  <Link href="/about" className="inline-flex items-center space-x-3 text-primary-700 hover:text-primary-800 font-semibold text-lg group transition-all duration-300">
-                    <span>Learn More About Us</span>
-                    <svg className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                    </svg>
-                  </Link>
-                </div>
-              </div>
-            </div>
-            
-            {/* Right Side - Image */}
-            <div className="relative group">
-              <div className="relative overflow-hidden rounded-3xl shadow-large">
-                <Image
-                  src="/img/10.jpg"
-                  alt="Community Connection"
-                  width={600}
-                  height={400}
-                  className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Call to Action */}
-      <section className="section-padding bg-gradient-to-br from-primary-700 to-primary-800 text-white">
-        <div className="container-custom text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Ready to Make a Difference?
-          </h2>
-          <p className="text-xl md:text-2xl text-primary-100 mb-12 max-w-3xl mx-auto">
-            Join us in our mission to empower women and girls across Africa
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/work" className="bg-white text-primary-700 hover:bg-primary-50 font-semibold py-4 px-8 rounded-lg shadow-medium hover:shadow-large transform hover:-translate-y-1 transition-all duration-300 text-lg">
-              Learn About Our Work
-            </Link>
-            <Link href="/gallery" className="border-2 border-white text-white hover:bg-white hover:text-primary-700 font-semibold py-4 px-8 rounded-lg transition-all duration-300 text-lg">
-              See Our Impact
-            </Link>
-          </div>
-        </div>
-      </section>
 
       <Footer />
     </main>

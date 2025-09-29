@@ -20,7 +20,7 @@ export default function PrivacyPage() {
             priority
           />
           {/* Overlay for better text readability */}
-          <div className="absolute inset-0 bg-black/80"></div>
+          <div className="absolute inset-0 bg-black/60"></div>
         </div>
         
         <div className="container-custom relative z-10 text-center">

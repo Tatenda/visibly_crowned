@@ -1,12 +1,13 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { sendContactEmail, ContactFormData } from '@/lib/emailService';
 
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { name, email, subject, message } = body;
+    const { firstName, lastName, email, subject, message } = body;
 
     // Validate required fields
-    if (!name || !email || !subject || !message) {
+    if (!firstName || !lastName || !email || !subject || !message) {
       return NextResponse.json(
         { error: 'All fields are required' },
         { status: 400 }
@@ -22,16 +23,35 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Here you would typically:
-    // 1. Save to database
-    // 2. Send email notification
-    // 3. Log the contact request
-    
-    // For now, we'll just simulate success
-    console.log('Contact form submission:', { name, email, subject, message });
+    // Prepare form data for email
+    const formData: ContactFormData = {
+      firstName,
+      lastName,
+      email,
+      subject,
+      message
+    };
 
-    // Simulate processing time
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    // Send email notification
+    const emailSent = await sendContactEmail(formData);
+    
+    if (!emailSent) {
+      return NextResponse.json(
+        { 
+          error: 'Failed to send email. Please try again later.',
+          success: false 
+        },
+        { status: 500 }
+      );
+    }
+
+    // Log the contact request
+    console.log('Contact form submission received:', { 
+      name: `${firstName} ${lastName}`, 
+      email, 
+      subject, 
+      message: message.substring(0, 100) + '...' 
+    });
 
     return NextResponse.json(
       { 
